@@ -1,0 +1,134 @@
+{
+  "modelo_A": {
+    "nome": "XGBoost",
+    "features": [
+      "genero",
+      "idade",
+      "altura_m",
+      "peso_kg",
+      "historia_familiar_sobrepeso",
+      "come_comida_calorica_freq",
+      "freq_consumo_vegetais",
+      "num_refeicoes_principais",
+      "come_entre_refeicoes",
+      "fumante",
+      "consumo_agua_litros",
+      "monitora_calorias",
+      "freq_atividade_fisica",
+      "tempo_uso_dispositivos",
+      "freq_consumo_alcool",
+      "meio_transporte",
+      "imc"
+    ],
+    "test_accuracy": 0.9880382775119617,
+    "test_f1_macro": 0.9875023814709544,
+    "descricao": "Com peso/altura/IMC — baseline trivial (vazamento)"
+  },
+  "modelo_B": {
+    "nome": "XGBoost",
+    "features": [
+      "genero",
+      "idade",
+      "historia_familiar_sobrepeso",
+      "come_comida_calorica_freq",
+      "freq_consumo_vegetais",
+      "num_refeicoes_principais",
+      "come_entre_refeicoes",
+      "fumante",
+      "consumo_agua_litros",
+      "monitora_calorias",
+      "freq_atividade_fisica",
+      "tempo_uso_dispositivos",
+      "freq_consumo_alcool",
+      "meio_transporte"
+    ],
+    "test_accuracy": 0.7751196172248804,
+    "test_f1_macro": 0.7674367702443469,
+    "best_params": {
+      "clf__learning_rate": "0.05",
+      "clf__max_depth": "8",
+      "clf__n_estimators": "400",
+      "clf__subsample": "0.8"
+    },
+    "descricao": "Sem peso/altura — valor clínico real"
+  },
+  "classes": [
+    "Insufficient_Weight",
+    "Normal_Weight",
+    "Obesity_Type_I",
+    "Obesity_Type_II",
+    "Obesity_Type_III",
+    "Overweight_Level_I",
+    "Overweight_Level_II"
+  ],
+  "dicionario_colunas": {
+    "genero": {
+      "orig": "Gender",
+      "desc": "Sexo biológico"
+    },
+    "idade": {
+      "orig": "Age",
+      "desc": "Idade em anos"
+    },
+    "altura_m": {
+      "orig": "Height",
+      "desc": "Altura em metros"
+    },
+    "peso_kg": {
+      "orig": "Weight",
+      "desc": "Peso em quilogramas"
+    },
+    "historia_familiar_sobrepeso": {
+      "orig": "family_history",
+      "desc": "Histórico familiar de excesso de peso"
+    },
+    "come_comida_calorica_freq": {
+      "orig": "FAVC",
+      "desc": "Consome alimentos calóricos com frequência?"
+    },
+    "freq_consumo_vegetais": {
+      "orig": "FCVC",
+      "desc": "Frequência de consumo de vegetais (1-3)"
+    },
+    "num_refeicoes_principais": {
+      "orig": "NCP",
+      "desc": "Número de refeições principais por dia (1-4)"
+    },
+    "come_entre_refeicoes": {
+      "orig": "CAEC",
+      "desc": "Lanche entre refeições"
+    },
+    "fumante": {
+      "orig": "SMOKE",
+      "desc": "Fuma?"
+    },
+    "consumo_agua_litros": {
+      "orig": "CH2O",
+      "desc": "Consumo diário de água (1=<1L, 2=1-2L, 3=>2L)"
+    },
+    "monitora_calorias": {
+      "orig": "SCC",
+      "desc": "Monitora calorias ingeridas?"
+    },
+    "freq_atividade_fisica": {
+      "orig": "FAF",
+      "desc": "Frequência semanal de atividade física (0-3)"
+    },
+    "tempo_uso_dispositivos": {
+      "orig": "TUE",
+      "desc": "Tempo em dispositivos (0=0-2h, 1=3-5h, 2=>5h)"
+    },
+    "freq_consumo_alcool": {
+      "orig": "CALC",
+      "desc": "Frequência de consumo de álcool"
+    },
+    "meio_transporte": {
+      "orig": "MTRANS",
+      "desc": "Meio de transporte habitual"
+    },
+    "nivel_obesidade": {
+      "orig": "Obesity",
+      "desc": "Nível de obesidade (alvo)"
+    }
+  }
+}
