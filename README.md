@@ -24,11 +24,6 @@
 
 A obesidade é uma condição multifatorial — envolve genética, hábitos alimentares, atividade física e fatores ambientais. O desafio: **construir um modelo capaz de prever o nível de obesidade de um paciente** a partir de variáveis comportamentais e biométricas, apoiando a tomada de decisão clínica.
 
-### Dataset
-
-- **Variável-alvo:** `Obesity` (7 classes: de `Insufficient_Weight` a `Obesity_Type_III`)
-- **Dicionário completo:** [`docs/dicionario_obesity.pdf`](docs/dicionario_obesity.pdf)
-
 ---
 
 ## 🧪 Estratégia de Modelagem — Dois Modelos, Duas Histórias
