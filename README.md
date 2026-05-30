@@ -15,6 +15,7 @@
 | Recurso | Link |
 |---|---|
 | 🚀 **Aplicação Streamlit** | [Acessar app](https://tech-challenge---fase-4-mcgtzwyczcwcguygblcusk.streamlit.app/) |
+| 📓 **Notebook renderizado** | [Acessar Notebook](https://nbviewer.org/github/gnascimento9/Tech-Challenge---Fase-4/blob/main/notebooks/TechChallenge_Fase04_Obesidade.ipynb) |
 | 🎥 **Vídeo de apresentação** | [Assistir no YouTube](https://youtu.be/SEU-VIDEO) |
 
 
