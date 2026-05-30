@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 
 import joblib
+
+_APP_DIR = Path(__file__).resolve().parent
+_ROOT    = _APP_DIR.parent
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -52,7 +55,7 @@ NOVOS_NOMES = {
 # DADOS E MODELOS
 @st.cache_resource
 def carregar_artefatos():
-    base = Path("artifacts")
+    base = _ROOT / "models"          # repo/models/
     return (
         joblib.load(base / "modelo_A_com_imc.pkl"),
         joblib.load(base / "modelo_B_sem_imc.pkl"),
@@ -62,7 +65,7 @@ def carregar_artefatos():
 
 @st.cache_data
 def carregar_dados():
-    df = pd.read_csv("Obesity.csv").rename(columns=NOVOS_NOMES).drop_duplicates().reset_index(drop=True)
+    df = pd.read_csv(_ROOT / "data" / "raw" / "Obesity.csv").rename(columns=NOVOS_NOMES).drop_duplicates().reset_index(drop=True)
     for col in ['freq_consumo_vegetais', 'num_refeicoes_principais',
                 'consumo_agua_litros', 'freq_atividade_fisica', 'tempo_uso_dispositivos']:
         df[col] = df[col].round().astype(int)
