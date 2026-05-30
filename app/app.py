@@ -55,7 +55,7 @@ NOVOS_NOMES = {
 # DADOS E MODELOS
 @st.cache_resource
 def carregar_artefatos():
-    base = _ROOT / "models"          # repo/models/
+    base = _ROOT / "models"
     return (
         joblib.load(base / "modelo_A_com_imc.pkl"),
         joblib.load(base / "modelo_B_sem_imc.pkl"),
